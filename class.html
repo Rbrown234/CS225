@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script>
+            function DoSomething()
+            {
+                alert("yep") 
+            }
+        </script>
+        <script>
+            function loop()
+            {
+                var input=document.getElementById("input").value();
+                const result=hailstone(input);
+                alert(result);
+                
+            }
+            function hailstone(x)
+            {
+                while(x > 1)
+                {
+                    count++
+                    if(x % 2 == 0) x = x/2;
+                    else
+                        x = 3*x+1
+                }
+                return count;
+                
+            }
+        </script>
+    </head>
+</html>
