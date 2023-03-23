@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>Forms    </head>
+    <body>
+        <form >
+            <label for="Fname">First Name: </label>
+            <br/>
+            <input pattern=".{1,32}" id="Fname" name="Fname" type="text" placeholder="First Name" required/>
+            <br/>
+
+            <label for="Lname">Last Name: </label>
+            <br/>
+            <input pattern=".{1,32}" id="Lname" name="Lname" type="text" placeholder="Last Name" required/>
+            <br/>
+
+            <label for="password">Password </label>
+            <br/>
+            <input id="password" name="password" type="text" placeholder="password"/>
+            <br/>
+
+            <label for="email">Email </label>
+            <br/>
+            <input id="email" name="email" type="text" placeholder="email"/>
+            <br/>
+
+            <label for="phone">phone number:</label>
+			<br/>
+			<input type="tel" id="phone" name="phone" placeholder="867-5309" 
+				pattern="[0-9]{3}-[0-9]{4}"/>
+
+           
+
+            
+
+            <fieldset>
+                
+
+                <input type="checkbox" id="verify" name="verify" value="true"/>
+			<label id="verify">Can we email you?</label>
+			<br/>
+
+            <legend>Can we text you?</legend>
+                <input id="radio" name="yes" type="radio" value="yes"/>
+                <label for="yes">Yes</label>
+                <br/>
+                <input id="radio" name="no" type="radio" value="no"/>
+                <label for="no">No</label>
+                <br/>
+            </fieldset>
+            <fieldset>
+                <legend>Do you like our product</legend>
+                <input type="radio" id="1" name="status" value="1">
+                <label for="1">1 - Don't like it</label>
+                <br/>
+                <input type="radio" id="2" name="status" value="2"/>
+                <label for="2">2 - Somewhat dislike it</label>
+                <br/>
+                <input type="radio" id="3" name="status" value="3"/>
+                <label for="3">3 - Neutral</label>
+                <br/>
+                <input type="radio" id="4" name="status" value="4"/>
+                <label for="4">4 - Somewhat love it</label>
+                <br/>
+                <input type="radio" id="5" name="status" value="5"/>
+                <label for="5">5 - Love it</label>
+                <br/>
+            </fieldset>
+            <input type="submit"/>
+            <input type="clear"/>
+            <br/>
+        </form>
+    </body>
+</html>
