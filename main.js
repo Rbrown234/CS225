@@ -11,7 +11,7 @@
       const shadow = this.attachShadow({ mode: 'open' });
 
       // creating a container for the editable-list component
-      const editableListContainer = document.createElement('div');
+      const todoListContainer = document.createElement('div');
 
       // get attribute values from getters
       const title = this.title;
