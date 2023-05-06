@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
 <!-- First, let's create a button element in the HTML markup -->
-<button id="addTodoBtn">Add Todo List</button>
+    <button id="addTodoBtn">Add Todo List</button>
 
-<template id="todo-list-vars">
-  <style>
-    details {font-family: "Open Sans Light",Helvetica,Arial}
-    .name {font-weight: bold; color: #217ac0; font-size: 120%}
-    h4 { margin: 10px 0 -8px 0; }
-    h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
-    h4 span { border: 1px solid #cee9f9; border-radius: 4px }
-    h4 span { color: white }
-    .attributes { margin-left: 22px; font-size: 90% }
-    .attributes p { margin-left: 16px; font-style: italic }
-    </style>
-    <details>
-      <summary>
-        <span>
-          <code class="name">&lt;<slot name="task-name">NEED NAME</slot>&gt;</code>
-          <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
-        </span>
-      </summary>
-      <div class="attributes">
-        <h4><span>Attributes</span></h4>
-        <slot name="attributes"><p>None</p></slot>
-      </div>
-    </details>
-    <hr>
-</template>
 
-<todo-list>
-  <span slot="task-name">
-    Walk the dog
-  </span>
-  <span slot="description">
-    The time of the day where you walk your dog, what else?
-  </span>
-</todo-list>
+
+  </head>
+<body>
+  <template id="todo-list-template">
+    <style>
+      details {font-family: "Open Sans Light",Helvetica,Arial}
+      .name {font-weight: bold; color: #217ac0; font-size: 120%}
+      h4 { margin: 10px 0 -8px 0; }
+      h4 span { background: #217ac0; padding: 2px 6px 2px 6px }
+      h4 span { border: 1px solid #cee9f9; border-radius: 4px }
+      h4 span { color: white }
+      .attributes { margin-left: 22px; font-size: 90% }
+      .attributes p { margin-left: 16px; font-style: italic }
+      </style>
+      <details>
+        <summary>
+          <span>
+            <code class="name">&lt;<slot name="task-name">NEED NAME</slot>&gt;</code>
+            <i class="desc"><slot name="description">NEED DESCRIPTION</slot></i>
+          </span>
+        </summary>
+        <div class="attributes">
+          <h4><span>Attributes</span></h4>
+          <slot name="attributes"><p>None</p></slot>
+        </div>
+      </details>
+      <hr>
+  </template>
+
 <ul id="todoList">
+  <todo-list>
+    <span slot="task-name">
+      Walk the dog
+    </span>
+    <span slot="description">
+      The time of the day where you walk your dog, what else?
+    </span>
     
-</ul>
-
-</head>
+  </todo-list>
+  <todo-list>
+    <span slot="task-name">
+      Smack someone in face
+    </span>
+    <span slot="description">
+      The part of your day where you slap somebody because why not
+    </span>
+    
+  </todo-list>
+  
+      
+  </ul>
+</body>
 
 
 <script type="text/javascript" src="script.js"></script>
