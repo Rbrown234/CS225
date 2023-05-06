@@ -5,17 +5,39 @@
     <title>Todo List</title>
 </head>
 <body>
-    <todo-list
-        title="TODO"
-        list-item-0="First item on the list"
-        list-item-1="Second item on the list"
-        list-item-2="Third item on the list"
-        list-item-3="Fourth item on the list"
-        list-item-4="Fifth item on the list"
-        listItem="This will not appear"
-        add-item-text="Add new list item:"
-    >
-    </todo-list>
+    <button id="addTodoBtn">Add Todo List</button>
+    <ul id="todoList">
+        <todo-list 
+        
+            title="TODO"
+            list-item-0="First item on the list"
+            list-item-1="Second item on the list"
+            list-item-2="Third item on the list"
+            list-item-3="Fourth item on the list"
+            list-item-4="Fifth item on the list"
+            listItem="This will not appear"
+            add-item-text="Add new list item:"
+            list-item-5="This does nothing"
+       >
+        
+        </todo-list>
+    </ul>
+
     <script type="text/javascript" src="main.js"></script>
+    <script>
+        const addTodoBtn = document.getElementById('addTodoBtn');
+        const todoList = document.getElementById('todoList');
+        const todoInput = document.createElement('input');
+        todoInput.setAttribute('type', 'text');
+      
+        addTodoBtn.addEventListener('click', function() {
+          const todoItem = document.createElement('todo-list');
+          const todoText = document.createTextNode(todoInput.value);
+          //const todoCount = document.create
+          todoItem.appendChild(todoText);
+          todoList.appendChild(todoItem);
+          todoInput.value = '';
+        });
+      </script>
 </body>
 </html>
