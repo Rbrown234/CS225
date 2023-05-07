@@ -6,6 +6,8 @@ var tasks = [
     "Go grocery shopping"
   ];
   
+
+  
   // Function to add a random task to the to-do list
   function addTask() {
     // Get a random task from the array
@@ -22,6 +24,28 @@ var tasks = [
   }
 
   function removeTask(){
+    
+
+    //var li = document.getElementById("li")
+    
+
     var ul = document.getElementById("todolist");
-    ul.remove()
+    while (ul.firstChild) {
+      ul.removeChild(ul.firstChild);
+    }
   }
+
+  var counterVal = 0;
+
+function incrementClick() {
+    updateDisplay(++counterVal);
+}
+
+function resetCounter() {
+    counterVal = 0;
+    updateDisplay(counterVal);
+}
+
+function updateDisplay(val) {
+    document.getElementById("counter-label").innerHTML = val;
+}
